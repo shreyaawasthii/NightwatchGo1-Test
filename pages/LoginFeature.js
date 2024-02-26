@@ -11,20 +11,25 @@ module.exports = {
       selector: '//a[contains(text(), "Logout")]',
       locateStrategy: 'xpath',
     },
+    invalidCredentialError: {
+      selector: '//p[contains(text(), "Your email or password is incorrect!")]',
+      locateStrategy: 'xpath',
+    }
   },
-  // commands: {
-  //   performLogin(email, password) {
-  //     this.api
-  //       .waitForElementVisible('@loginLink')
-  //       .click('@loginLink')
-  //       .waitForElementVisible('@emailInput')
-  //       .setValue('@emailInput', email)
-  //       .waitForElementVisible('@passwordInput')
-  //       .setValue('@passwordInput', password)
-  //       .click('@loginButton')
-  //       .waitForElementVisible('@logoutLink');
-
-  //     return this.api;
-  //   },
-  // },
+  commands: [{
+    verifyLoginLink(){
+      return this
+        .waitForElementVisible('@loginLink')
+        .click('@loginLink')
+    },
+    
+    performLogin(email, password) {
+      return this
+        .waitForElementVisible('@emailInput')
+        .setValue('@emailInput', email)
+        .waitForElementVisible('@passwordInput')
+        .setValue('@passwordInput', password)
+        .click('@loginButton')
+    },
+  }],
 };

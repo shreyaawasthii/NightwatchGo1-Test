@@ -8,16 +8,17 @@ module.exports = {
       searchButton: 'button#submit_search',
       searchResultsTitle: '.title.text-center',
     },
-    // commands: {
-    //   performSearch(query) {
-    //     this.api
-    //     .assert.visible('@productsLink')
-    //     .click('@productsLink')
-    //     .assert.visible('@searchInput')
-    //     .setValue('@searchInput', query)
-    //     .click('@searchButton')
-    //     .assert.containsText('@searchResultsTitle', 'SEARCHED PRODUCTS');
-    //     return this;
-    //   },
-    // },
+    commands: [{
+      enterProductLink(){
+        return this
+        .click('@productLink')
+      },
+      performSearch(query) {
+        return this
+        // .assert.visible('@searchInput')
+        .setValue('@searchInput', query)
+        .click('@searchButton')
+        .assert.containsText('@searchResultsTitle', 'SEARCHED PRODUCTS');
+      },
+    }],
   };

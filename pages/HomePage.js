@@ -7,12 +7,4 @@ module.exports = {
     },
     navBar: '.nav.navbar-nav',
   },
-  // commands: {
-  //   verifyHomePage() {
-  //     return this.api
-  //       .waitForElementVisible('@header')
-  //       .assert.titleContains('Automation Exercise')
-  //       .assert.visible('@homeLink, @navBar');
-  //   },
-  // },
 };
