@@ -22,9 +22,9 @@ This command will execute all the test cases defined in the Functionality.test.j
 
 Test Structure:
 The tests are organized into separate test suites based on the different features of the website. Here's an overview of the test suites available:
-* 		HomePage Verification: Tests related to verifying elements on the homepage of the website.
-* 		Test Login Feature: Tests related to user login functionality, including positive and negative scenarios.
-* 		Test ContactUs Feature: Tests related to the Contact Us page, including form submission with valid and invalid inputs.
-* 		Test Search Feature: Tests related to the search functionality on the website.
-* 		Test Purchase Product Feature: Tests related to the product purchase functionality on the website.
+* HomePage Verification: Tests related to verifying elements on the homepage of the website.
+* Test Login Feature: Tests related to user login functionality, including positive and negative scenarios.
+* Test ContactUs Feature: Tests related to the Contact Us page, including form submission with valid and invalid inputs.
+* Test Search Feature: Tests related to the search functionality on the website.
+* Test Purchase Product Feature: Tests related to the product purchase functionality on the website.
 
