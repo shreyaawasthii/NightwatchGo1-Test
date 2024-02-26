@@ -1,8 +1,7 @@
 Automated Testing Documentation
-
 This repository contains automated tests for the website https://www.automationexercise.com/. These tests are written using the Nightwatch.js framework with the Page Object Model (POM) design pattern.
 
-Prerequisites
+Prerequisites:
 Before running the automated tests, ensure that you have the following installed:
 * Node.js
 * npm (Node.js package manager)
@@ -10,9 +9,7 @@ Before running the automated tests, ensure that you have the following installed
 
 Installation
 To install the necessary dependencies for running the tests, execute the following command in your terminal
-
 npm install
-
 This will install all the required dependencies listed in the package.json file.
 
 Configuration
@@ -20,9 +17,7 @@ Before running the tests, you may need to adjust the configuration settings in t
 
 Usage
 To run the automated tests, execute the following command in your terminal:
-
 npm test
-
 This command will execute all the test cases defined in the Functionality.test.js file.
 
 Test Structure
