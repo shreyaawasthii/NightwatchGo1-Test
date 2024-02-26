@@ -12,7 +12,7 @@ To install the necessary dependencies for running the tests, execute the followi
 npm install
 This will install all the required dependencies listed in the package.json file.
 
-Configuration
+Configuration:
 Before running the tests, you may need to adjust the configuration settings in the nightwatch.conf.js file to match your environment. For example, you may need to specify the path to the Chromedriver executable.
 
 Usage:
