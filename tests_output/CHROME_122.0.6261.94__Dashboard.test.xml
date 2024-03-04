@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="0">
+
+  <testsuite name="Dashboard.test"
+    errors="0" failures="0" hostname="" id="" package="Dashboard.test" skipped="0"
+    tests="0" time="0.001000" timestamp="">
+  
+
+  
+    <system-err>
+       Error
+   Unknown api method &#34;carouselImageCount&#34;.
+
+    Error location:
+    /home/knoldus/Documents/NightwatchPractice/tests/LoginPage.test.js:22
+    ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+     20 |       .expect.element(&#39;@oneLogo&#39;).to.be.present
+     21 |     Login
+     22 |       .assert.carouselImageCount(4, &#39;Expected number of carousel images is 4&#39;); 
+     23 |   });
+     24 | 
+    ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+    </system-err>
+  
+
+    
+
+  
+  </testsuite>
+</testsuites>

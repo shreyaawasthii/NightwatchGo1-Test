@@ -56,6 +56,9 @@ afterEach(async (browser) => {
 
 });
 
+
+
+
   describe('Test Login Feature', () => {
     beforeEach((browser) => {
       browser
@@ -84,12 +87,13 @@ afterEach(async (browser) => {
     LoginFeature
       .verifyLoginLink()
       .performLogin('demouser@gmail.com', 'password123')
-      .expect.element('@logoutLink').to.be.visible;
+      .expect.element('@logoutLink').to.be.visible
   });
 
   // Negative Test
   it('Verify if the user can log in with invalid credentials', function(browser){
     LoginFeature
+    .click('@logoutLink')
     .verifyLoginLink()
     .performLogin('unregistereduser@hotmail.com','password123')
     .expect.element('@invalidCredentialError').to.be.present
@@ -97,7 +101,6 @@ afterEach(async (browser) => {
   })
 
 });
-
 
 describe('Test ContactUs Feature', () => {
   beforeEach((browser) => {
@@ -121,6 +124,7 @@ afterEach(async (browser) => {
   }
   browser.end();
 });
+
 
   // Positive Test
   it('Verify that the elements of contact us page are working fine', function(browser) {

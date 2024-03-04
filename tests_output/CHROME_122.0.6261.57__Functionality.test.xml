@@ -5,9 +5,9 @@
 
   <testsuite name="Functionality.test"
     errors="0" failures="2" hostname="" id="" package="Functionality.test" skipped="0"
-    tests="7" time="620.4" timestamp="">
+    tests="7" time="160.0" timestamp="">
   
-    <testcase name="Verify that the elements of HomePage are visible" classname="Functionality.test" time="32.30" assertions="3">
+    <testcase name="Verify that the elements of HomePage are visible" classname="Functionality.test" time="16.35" assertions="3">
 
     
 
@@ -16,30 +16,19 @@
     
     </testcase>
   
-    <testcase name="Verify that an error is displayed for an invalid URL addition" classname="Functionality.test" time="100.5" assertions="2">  <failure message="Testing if the page title contains &#39;Error&#39; in 5000ms - expected &#34;contains &#39;Error&#39;&#34; but got: &#34;Automation Exercise&#34; (5182ms)">    at DescribeInstance.&lt;anonymous&gt; (/home/knoldus/Desktop/NightwatchPractice/tests/Functionality.test.js:48:13)</failure>
+    <testcase name="Verify that an error is displayed for an invalid URL addition" classname="Functionality.test" time="19.79" assertions="2">  <failure message="Testing if the page title contains &#39;Error&#39; in 5000ms - expected &#34;contains &#39;Error&#39;&#34; but got: &#34;Automation Exercise&#34; (5157ms)">    at DescribeInstance.&lt;anonymous&gt; (/home/knoldus/Documents/NightwatchPractice/tests/Functionality.test.js:47:13)</failure>
 
     
 
     
     </testcase>
   
-    <testcase name="Verify that the navigation menu does not contain Home icon or link" classname="Functionality.test" time="21.91" assertions="1">  <failure message="Testing if element &lt;Element [name=@homeLink]&gt; is not present in 5000ms - expected &#34;is not present&#34; but got: &#34;present&#34; (5273ms)">    at DescribeInstance.&lt;anonymous&gt; (/home/knoldus/Desktop/NightwatchPractice/tests/Functionality.test.js:55:17)</failure>
+    <testcase name="Verify that the navigation menu does not contain Home icon or link" classname="Functionality.test" time="10.35" assertions="1">  <failure message="Testing if element &lt;Element [name=@homeLink]&gt; is not present in 5000ms - expected &#34;is not present&#34; but got: &#34;present&#34; (5189ms)">    at DescribeInstance.&lt;anonymous&gt; (/home/knoldus/Documents/NightwatchPractice/tests/Functionality.test.js:54:17)</failure>
 
     
     </testcase>
   
-    <testcase name="Verify that the user is able to successfully logged in" classname="Functionality.test" time="48.05" assertions="4">
-
-    
-
-    
-
-    
-
-    
-    </testcase>
-  
-    <testcase name="Verify if the user can log in with invalid credentials" classname="Functionality.test" time="12.81" assertions="4">
+    <testcase name="Verify that the user is able to successfully logged in" classname="Functionality.test" time="10.51" assertions="4">
 
     
 
@@ -50,14 +39,25 @@
     
     </testcase>
   
-    <testcase name="Verify that the elements of contact us page are working fine" classname="Functionality.test" time="29.25" assertions="2">
+    <testcase name="Verify if the user can log in with invalid credentials" classname="Functionality.test" time="9.359" assertions="4">
+
+    
+
+    
 
     
 
     
     </testcase>
   
-    <testcase name="Verify Submitting the Contact Us form with missing information." classname="Functionality.test" time="26.88" assertions="3">
+    <testcase name="Verify that the elements of contact us page are working fine" classname="Functionality.test" time="6.641" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Verify Submitting the Contact Us form with missing information." classname="Functionality.test" time="6.899" assertions="3">
 
     
 

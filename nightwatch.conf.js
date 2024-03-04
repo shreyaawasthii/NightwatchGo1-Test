@@ -21,10 +21,10 @@ module.exports = {
   page_objects_path: ['pages'],
 
   // See https://nightwatchjs.org/guide/extending-nightwatch/adding-custom-commands.html
-  ccustom_commands_path: ['./commands'],
+  custom_commands_path: ['commands'],
 
   // See https://nightwatchjs.org/guide/extending-nightwatch/adding-custom-assertions.html
-  custom_assertions_path: '',
+  custom_assertions_path: ['assertions'],
 
   // See https://nightwatchjs.org/guide/extending-nightwatch/adding-plugins.html
   plugins: [],
@@ -42,12 +42,19 @@ module.exports = {
   test_settings: {
     default: {
       disable_error_log: false,
-      launch_url: 'https://nightwatchjs.org',
+      launch_url: 'https://auth.go1percent.com/auth/realms/nashtech/protocol/openid-connect/auth?client_id=leaderboard-ui&redirect_uri=https%3A%2F%2Fnashtechglobal.go1percent.com%2Fmy-dashboard&state=490ceda0-c395-4d8b-acc3-d41513a0aeac&response_mode=fragment&response_type=code&scope=openid&nonce=03c35f02-48cb-4332-a669-d32bb2bdaf17',
 
       screenshots: {
         enabled: false,
-        path: 'screens',
-        on_failure: true
+        on_complete: true,
+        path: 'screenshots', 
+        on_complete: async function (browser, done) {
+          const timestamp = new Date().toISOString().replace(/:/g, '-');
+          const screenshotName = `complete-${timestamp}.png`;
+
+          await browser.saveScreenshot(`./${this.screenshots.path}/${screenshotName}`);
+          done();
+        },
       },
 
       desiredCapabilities: {
