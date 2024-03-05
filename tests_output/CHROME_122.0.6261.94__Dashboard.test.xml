@@ -1,27 +1,53 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites errors="0"
-            failures="0"
-            tests="0">
+<testsuites errors="1"
+            failures="1"
+            tests="2">
 
   <testsuite name="Dashboard.test"
-    errors="0" failures="0" hostname="" id="" package="Dashboard.test" skipped="0"
-    tests="0" time="0.001000" timestamp="">
+    errors="1" failures="1" hostname="" id="" package="Dashboard.test" skipped="0"
+    tests="2" time="34.04" timestamp="">
+  
+    <testcase name="Verify successful login with valid credentials" classname="Dashboard.test" time="3.618" assertions="0">
+    </testcase>
+  
+    <testcase name="Verify user should be able to see the all the activities on the My activity " classname="Dashboard.test" time="12.81" assertions="2">
+
+      <failure message="Timed out while waiting for element &lt;//span[contains(text(), &#34;Profile&#34;)]&gt; to be present for 5000 milliseconds. - expected &#34;visible&#34; but got: &#34;not found&#34; (5241ms)">    at DescribeInstance.&lt;anonymous&gt; (/home/knoldus/Documents/NightwatchGo1%/tests/Dashboard.test.js:25:6)</failure>
+
+    
+    <error message="Timed out while waiting for element &lt;//span[contains(text(), &#34;Profile&#34;)]&gt; to be present for 5000 milliseconds. - expected [32m&#34;visible&#34;[39m but got: [31m&#34;not found&#34;[39m [90m(5241ms)[39m" type="error"><![CDATA[
+    Error
+    at Command.executeCommand (/usr/local/lib/node_modules/nightwatch/lib/page-object/command-wrapper.js:281:22)
+    at Page.waitForElementVisible (/usr/local/lib/node_modules/nightwatch/lib/page-object/command-wrapper.js:86:27)
+    at DescribeInstance.&lt;anonymous&gt; (/home/knoldus/Documents/NightwatchGo1%/tests/Dashboard.test.js:25:6)
+    at Context.call (/usr/local/lib/node_modules/nightwatch/lib/testsuite/context.js:515:35)
+    at TestCase.run (/usr/local/lib/node_modules/nightwatch/lib/testsuite/testcase.js:58:31)
+    at Runnable.__runFn (/usr/local/lib/node_modules/nightwatch/lib/testsuite/index.js:839:80)
+    at Runnable.run (/usr/local/lib/node_modules/nightwatch/lib/testsuite/runnable.js:126:21)
+    at TestSuite.executeRunnable (/usr/local/lib/node_modules/nightwatch/lib/testsuite/index.js:1000:49)
+    at TestSuite.handleRunnable (/usr/local/lib/node_modules/nightwatch/lib/testsuite/index.js:1015:33)
+    at /usr/local/lib/node_modules/nightwatch/lib/testsuite/index.js:839:21
+    ]]></error>
+    
+    </testcase>
   
 
   
     <system-err>
-       Error
-   Unknown api method &#34;carouselImageCount&#34;.
+       TimeoutError
+   An error occurred while running .click() command on &lt;Element [name=@settings]&gt;: element click intercepted: Element is not clickable at point (2233, 61)
+  (Session info: chrome=122.0.6261.94)
+    {&#34;error&#34;:{&#34;name&#34;:&#34;ElementClickInterceptedError&#34;,&#34;remoteStacktrace&#34;:&#34;&#34;},&#34;status&#34;:-1,&#34;value&#34;:null}
 
     Error location:
-    /home/knoldus/Documents/NightwatchPractice/tests/LoginPage.test.js:22
-    ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-     20 |       .expect.element(&#39;@oneLogo&#39;).to.be.present
-     21 |     Login
-     22 |       .assert.carouselImageCount(4, &#39;Expected number of carousel images is 4&#39;); 
-     23 |   });
-     24 | 
-    ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+    /home/knoldus/Documents/NightwatchGo1%/tests/Dashboard.test.js:24
+    ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+     22 |     Dashboard
+     23 |     .waitForElementVisible(&#39;@settings&#39;,5000)
+     24 |     .click(&#39;@settings&#39;) 
+     25 |     .waitForElementVisible(&#39;@profile&#39;)
+     26 |     .click(&#39;@profile&#39;, browser)
+    ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
     </system-err>
   

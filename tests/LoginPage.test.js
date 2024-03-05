@@ -60,7 +60,7 @@ afterEach(async (browser) => {
 
   it('Verify successful login with valid credentials', function (browser) {
     Login
-      .loginWithCredentials('testadmin', 'testadmin')
+      .loginWithCredentials('testemployee', 'testemployee')
   });
 
   it('Verify remember me checkbox is selected during login', function (browser) {
